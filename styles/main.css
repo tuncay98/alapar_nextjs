@@ -1,0 +1,226 @@
+.nav-bar {
+  height: 75px;
+  background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%);
+  border-bottom: 0.5px solid white; }
+  .nav-bar .row {
+    height: 100%;
+    display: flex;
+    padding: 0 4rem; }
+    .nav-bar .row .column {
+      flex: 50%;
+      justify-content: center; }
+
+.header {
+  height: 100%;
+  background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%); }
+  .header .title {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center; }
+  .header .header-carousel {
+    height: 100%;
+    width: 100%;
+    padding: 0 4rem;
+    position: relative; }
+    .header .header-carousel .header-carousel-container {
+      height: 100%;
+      display: flex;
+      overflow-x: hidden; }
+    .header .header-carousel .previous-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      left: 1rem; }
+    .header .header-carousel .next-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      right: 1rem; }
+  .header .carousel-item-container {
+    height: 300px;
+    flex-wrap: nowrap;
+    flex: 0 0 auto;
+    width: 25%;
+    transition: all 2s ease; }
+    .header .carousel-item-container > .item {
+      height: 100%;
+      width: 100%;
+      padding: 15px 15px 15px 0; }
+
+@media (max-width: 1024px) {
+  .header .header-carousel {
+    height: 100%;
+    width: 100%;
+    padding: 0 4rem;
+    position: relative; }
+    .header .header-carousel .header-carousel-container {
+      height: 100%;
+      display: flex;
+      overflow-x: hidden; }
+    .header .header-carousel .previous-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      left: 1rem; }
+    .header .header-carousel .next-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      right: 1rem; }
+  .header .carousel-item-container {
+    height: 300px;
+    flex-wrap: nowrap;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+    transition: all 2s ease; }
+    .header .carousel-item-container > .item {
+      height: 100%;
+      width: 100%;
+      padding: 15px 15px 15px 0; } }
+@media (max-width: 768px) {
+  .header .header-carousel {
+    height: 100%;
+    width: 100%;
+    padding: 0 4rem;
+    position: relative; }
+    .header .header-carousel .header-carousel-container {
+      height: 100%;
+      display: flex;
+      overflow-x: hidden; }
+    .header .header-carousel .previous-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      left: 1rem; }
+    .header .header-carousel .next-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      right: 1rem; }
+  .header .carousel-item-container {
+    height: 250px;
+    flex-wrap: nowrap;
+    flex: 0 0 auto;
+    width: 50%;
+    transition: all 2s ease; }
+    .header .carousel-item-container > .item {
+      height: 100%;
+      width: 100%;
+      padding: 15px 15px 15px 0; } }
+@media (max-width: 425px) {
+  .header .header-carousel {
+    height: 100%;
+    width: 100%;
+    padding: 0 4rem;
+    position: relative; }
+    .header .header-carousel .header-carousel-container {
+      height: 100%;
+      display: flex;
+      overflow-x: hidden; }
+    .header .header-carousel .previous-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      left: 1rem; }
+    .header .header-carousel .next-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      right: 1rem; }
+  .header .carousel-item-container {
+    height: 300px;
+    flex-wrap: nowrap;
+    flex: 0 0 auto;
+    width: 100%;
+    transition: all 2s ease; }
+    .header .carousel-item-container > .item {
+      height: 100%;
+      width: 100%;
+      padding: 15px 15px 15px 0; } }
+.card {
+  height: 100%; }
+  .card .card-main-side {
+    height: 83.3333333333%;
+    position: relative; }
+    .card .card-main-side .background {
+      height: 100%;
+      position: relative; }
+      .card .card-main-side .background .slider {
+        height: 100%;
+        display: flex;
+        overflow-x: hidden; }
+        .card .card-main-side .background .slider img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: all 1s ease; }
+      .card .card-main-side .background .leftPart {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0; }
+        .card .card-main-side .background .leftPart .sliderDots {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          padding-bottom: 5px; }
+          .card .card-main-side .background .leftPart .sliderDots .dot {
+            cursor: pointer;
+            margin: 0 2px;
+            height: .75rem;
+            width: .75rem;
+            background-color: rgba(255, 255, 255, 0.25);
+            border: 1px solid #292929;
+            border-radius: 50%;
+            display: inline-block; }
+          .card .card-main-side .background .leftPart .sliderDots .activeDot {
+            background-color: white; }
+    .card .card-main-side .rightPart {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+      width: 16.6666666667%;
+      height: 100%; }
+      .card .card-main-side .rightPart .item {
+        height: 33.3333333333%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+        .card .card-main-side .rightPart .item > .icon {
+          font-size: 1.25rem;
+          text-align: center;
+          color: white; }
+        .card .card-main-side .rightPart .item > .value {
+          font-size: .85rem;
+          text-align: center;
+          color: white; }
+  .card .card-bottom-side {
+    height: 16.6666666667%;
+    display: flex;
+    background-color: white; }
+    .card .card-bottom-side .side {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .card .card-bottom-side .icon {
+      color: #292929;
+      font-weight: bold;
+      display: flex;
+      justify-content: center; }
+    .card .card-bottom-side .value {
+      font-weight: 500; }
+
+/*# sourceMappingURL=main.css.map */
