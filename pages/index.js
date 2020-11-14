@@ -1,4 +1,5 @@
-  import Head from 'next/head'
+import Head from 'next/head'
+import Category from '@/subcomponents/category'
 import { Component } from 'react'
 
 class Home extends Component {
@@ -8,13 +9,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-
-        <h1>
-          Thanks
-        </h1>
-
-
+      <div className={'main'}>
+        <div className={'container'}>
+          <Category></Category>
+          <Category></Category>
+        </div>
       </div>
 
     );

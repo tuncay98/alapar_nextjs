@@ -4,6 +4,9 @@ import { MdLocationOn } from 'react-icons/md'
 import { BiDoorOpen } from 'react-icons/bi'
 import { IoIosResize } from 'react-icons/io'
 import { FaRegBuilding } from 'react-icons/fa'
+import { RiVipCrown2Line } from 'react-icons/ri'
+
+import { format } from 'path'
 
 var crypto = require("crypto")
 
@@ -42,7 +45,7 @@ class Card extends Component {
             })
 
             this.imageList.current.querySelectorAll('img').forEach(e => {
-                e.style.transform = `translateX(-${this.state.imgWidth* this.state.imageIndex}px)`
+                e.style.transform = `translateX(-${this.state.imgWidth * this.state.imageIndex}px)`
             })
 
         }
@@ -58,7 +61,9 @@ class Card extends Component {
                             {this.props.children}
                         </div>
                         <div className={'leftPart'}>
-
+                            <div className={`Premium ${this.props.premium==true?'':'none'}`}>
+                                <RiVipCrown2Line/>
+                            </div>
                             <div className={'sliderDots'}>
                                 {Array.apply(null, { length: this.state.dotAmount })
                                     .map((w, index) => <div key={`${crypto.randomBytes(5).toString('hex')}`}
@@ -101,7 +106,7 @@ class Card extends Component {
                             <BiDollar />
                         </div>
                         <div className={'value'}>
-                            55.000
+                            {this.props.price}
                         </div>
                     </div>
                     <div className={'rightSide side'}>
@@ -109,7 +114,7 @@ class Card extends Component {
                             <MdLocationOn />
                         </div>
                         <div className={'value'}>
-                            Azadliq Metrosu
+                            {this.props.loc}
                         </div>
                     </div>
                 </div>

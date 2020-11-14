@@ -35,6 +35,16 @@ $card-bottom-color: white;
 $card-main-right-item-amount: 3;
 
 
+//Category
+$category-box-shadow: 0rem 0rem 20px -15px;
+$category-item-width: 100%/4;
+$category-item-height:  300px;
+
+
+
+.none{
+    display: none;
+}
 // Nav-Bar Section
 .nav-bar {
     height: $nav-bar-height;
@@ -92,7 +102,7 @@ $card-main-right-item-amount: 3;
 //Card
 .card {
     height: $card-height;
-
+    box-shadow: 0 0 20px -10px black;
     .card-main-side {
         height: $card-main-side-height;
         position: relative;
@@ -120,6 +130,14 @@ $card-main-right-item-amount: 3;
                 width: $card-main-side-left-part-width;
                 position: absolute;
                 bottom: 0;
+                
+                >.Premium{
+                    color: white;
+                    font-size: 1.35rem;
+                    position: absolute;
+                    left: 5px;
+                    top: 5px;
+                }
 
                 .sliderDots {
                     width: 100%;
@@ -207,3 +225,37 @@ $card-main-right-item-amount: 3;
 }
 
 //END CARD
+
+//Main
+
+.main{
+    .container{
+        padding: $left-padding;
+    }
+}
+
+//END MAIN
+
+.categoryCard{
+    box-shadow: $category-box-shadow;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-radius: 10px;
+    .categoryTitle{
+        text-align: left;
+        font-size: 1.5rem;
+        padding: 10px 1rem;
+    }
+
+    .categoryList{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        >.item{
+            height: $category-item-height;
+            width: $category-item-width;
+            padding: 10px;
+        }
+    }
+}

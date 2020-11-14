@@ -1,3 +1,6 @@
+.none {
+  display: none; }
+
 .nav-bar {
   height: 75px;
   background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%);
@@ -146,7 +149,8 @@
       width: 100%;
       padding: 15px 15px 15px 0; } }
 .card {
-  height: 100%; }
+  height: 100%;
+  box-shadow: 0 0 20px -10px black; }
   .card .card-main-side {
     height: 83.3333333333%;
     position: relative; }
@@ -167,6 +171,12 @@
         width: 100%;
         position: absolute;
         bottom: 0; }
+        .card .card-main-side .background .leftPart > .Premium {
+          color: white;
+          font-size: 1.35rem;
+          position: absolute;
+          left: 5px;
+          top: 5px; }
         .card .card-main-side .background .leftPart .sliderDots {
           width: 100%;
           position: absolute;
@@ -222,5 +232,26 @@
       justify-content: center; }
     .card .card-bottom-side .value {
       font-weight: 500; }
+
+.main .container {
+  padding: 0 4rem; }
+
+.categoryCard {
+  box-shadow: 0rem 0rem 20px -15px;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-radius: 10px; }
+  .categoryCard .categoryTitle {
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 10px 1rem; }
+  .categoryCard .categoryList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    .categoryCard .categoryList > .item {
+      height: 300px;
+      width: 25%;
+      padding: 10px; }
 
 /*# sourceMappingURL=main.css.map */
