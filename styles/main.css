@@ -1,9 +1,23 @@
 .none {
   display: none; }
 
+.underline {
+  position: relative; }
+  .underline::after {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 50%;
+    height: 50px;
+    background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%) no-repeat;
+    background-size: 100% 3px;
+    background-position-y: bottom; }
+
 .nav-bar {
   height: 75px;
-  background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%);
+  background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%) no-repeat;
   border-bottom: 0.5px solid white; }
   .nav-bar .row {
     height: 100%;
@@ -12,12 +26,24 @@
     .nav-bar .row .column {
       flex: 50%;
       justify-content: center; }
+      .nav-bar .row .column .logo {
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: white;
+        font-size: 3rem;
+        font-weight: 600; }
 
 .header {
   height: 100%;
-  background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%); }
+  background: linear-gradient(90deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%) no-repeat;
+  background-size: 100% 5px;
+  background-position-y: bottom;
+  margin: 3px 0 0 0; }
   .header .title {
-    font-size: 3rem;
+    padding-top: 20px;
+    font-size: 2rem;
     width: 100%;
     text-align: center; }
   .header .header-carousel {
@@ -43,6 +69,7 @@
       right: 1rem; }
   .header .carousel-item-container {
     height: 300px;
+    margin-bottom: 10px;
     flex-wrap: nowrap;
     flex: 0 0 auto;
     width: 25%;
@@ -76,6 +103,7 @@
       right: 1rem; }
   .header .carousel-item-container {
     height: 300px;
+    margin-bottom: 10px;
     flex-wrap: nowrap;
     flex: 0 0 auto;
     width: 33.3333333333%;
@@ -108,6 +136,7 @@
       right: 1rem; }
   .header .carousel-item-container {
     height: 250px;
+    margin-bottom: 10px;
     flex-wrap: nowrap;
     flex: 0 0 auto;
     width: 50%;
@@ -140,6 +169,7 @@
       right: 1rem; }
   .header .carousel-item-container {
     height: 300px;
+    margin-bottom: 10px;
     flex-wrap: nowrap;
     flex: 0 0 auto;
     width: 100%;
@@ -233,18 +263,34 @@
     .card .card-bottom-side .value {
       font-weight: 500; }
 
-.main .container {
-  padding: 0 4rem; }
+.main {
+  background: linear-gradient(190deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%) no-repeat, linear-gradient(0deg, #ffc0c0 0%, #b0d1ff 52%, #b9ffcd 100%) no-repeat;
+  background-position: left, right;
+  padding: 20px 0;
+  background-size: 5px 100%,  5px 100%; }
+  .main .container {
+    padding: 0 4rem; }
+    .main .container .title {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-align: center; }
 
 .categoryCard {
   box-shadow: 0rem 0rem 20px -15px;
-  margin: 20px 0;
   padding: 10px 0;
-  border-radius: 10px; }
-  .categoryCard .categoryTitle {
-    text-align: left;
-    font-size: 1.5rem;
-    padding: 10px 1rem; }
+  border-radius: 10px;
+  margin-bottom: 40px; }
+  .categoryCard .titles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .categoryCard .titles .categoryTitle {
+      text-align: left;
+      font-size: 1.5rem;
+      padding: 10px 1rem; }
+    .categoryCard .titles .extraTitle {
+      padding: 10px 1rem;
+      text-decoration: underline; }
   .categoryCard .categoryList {
     display: flex;
     flex-wrap: wrap;

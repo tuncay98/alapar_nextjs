@@ -11,6 +11,7 @@ class Home extends Component {
     return (
       <div className={'main'}>
         <div className={'container'}>
+          <div className={'title'}><span className={'underline'}>Elanlar</span></div>
           <Category></Category>
           <Category></Category>
         </div>

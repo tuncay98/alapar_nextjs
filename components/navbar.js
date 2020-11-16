@@ -12,7 +12,9 @@ class Navbar extends Component {
     return (
       <div className={'nav-bar'}>
           <div className={'row'}>
-              <div className={'column'}>Logo</div>
+              <div className={'column'}>
+                <div className={'logo'}>ALAPAR.AZ</div>
+              </div>
               <div className={'column'}>Actions</div>
           </div>
       </div>

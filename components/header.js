@@ -11,7 +11,7 @@ class Header extends Component {
     render(h) {
         return (
             <div className={'header'}>
-                <div className={'title'}>Title</div>
+                <div className={'title'}><span className={'underline'}>Özəl Elanlar</span></div>
                 <Carousel viewAmount={4}>
                     <div className={'carousel-item-container'}>
                         <div className={'item'}>
@@ -21,8 +21,16 @@ class Header extends Component {
                                 <img src="placeholders/3.jpg" />
                                 <img src="placeholders/1.jpg" />
                                 <img src="placeholders/1.jpg" />
-                                <img src="placeholders/1.jpg" />
-                            </Card>
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                <img src="placeholders/1.jpg" />                           
+                                </Card>
                         </div>
                     </div>
                     <div className={'carousel-item-container'}>
@@ -36,6 +44,20 @@ class Header extends Component {
                         <div className={'item'}>
                             <Card size={'20'} price={'30.000'} loc={'Xalqlar Metrosu'}>
                                 <img src="placeholders/3.jpg" />
+                            </Card>
+                        </div>
+                    </div>
+                    <div className={'carousel-item-container'}>
+                        <div className={'item'}>
+                            <Card size={'20'} price={'32.500'} loc={'7-ci mikrorayon'}>
+                                <img src="placeholders/1.jpg" />
+                            </Card>
+                        </div>
+                    </div>
+                    <div className={'carousel-item-container'}>
+                        <div className={'item'}>
+                            <Card size={'20'} price={'32.500'} loc={'7-ci mikrorayon'}>
+                                <img src="placeholders/1.jpg" />
                             </Card>
                         </div>
                     </div>

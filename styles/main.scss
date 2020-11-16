@@ -2,7 +2,10 @@
 //Colors
 $main-color : #000;
 $second-color : #000;
-$main-gradient: linear-gradient(90deg, rgba(255, 192, 192, 1) 0%, rgba(176, 209, 255, 1) 52%, rgba(185, 255, 205, 1) 100%);
+$main-gradient: linear-gradient(90deg, rgba(255, 192, 192, 1) 0%, rgba(176, 209, 255, 1) 52%, rgba(185, 255, 205, 1) 100%) no-repeat;
+$main-gradient-reverse: linear-gradient(190deg, rgba(255, 192, 192, 1) 0%, rgba(176, 209, 255, 1) 52%, rgba(185, 255, 205, 1) 100%) no-repeat;
+$main-gradient-mirror-reverse: linear-gradient(0deg, rgba(255, 192, 192, 1) 0%, rgba(176, 209, 255, 1) 52%, rgba(185, 255, 205, 1) 100%) no-repeat;
+
 
 //General
 $left-padding: 0 4rem;
@@ -45,10 +48,28 @@ $category-item-height:  300px;
 .none{
     display: none;
 }
+.underline{
+    position: relative;
+    &::after{
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 50%;
+        height: 50px;
+        //border-bottom: 2px solid red;
+        background: $main-gradient;
+        background-size: 100% 3px;
+        background-position-y: bottom;
+    }
+}
 // Nav-Bar Section
 .nav-bar {
     height: $nav-bar-height;
     background: $main-gradient;
+    
+    
     border-bottom: .5px solid rgb(255, 255, 255);
 
     .row {
@@ -59,6 +80,17 @@ $category-item-height:  300px;
         .column {
             flex: 50%;
             justify-content: center;
+
+            .logo{
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                color: white;
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
         }
     }
 }
@@ -68,10 +100,15 @@ $category-item-height:  300px;
 // Header Section
 .header {
     height: $header-height;
+    //background: $main-gradient;
     background: $main-gradient;
-
+    background-size: 100% 5px;
+    background-position-y: bottom;
+    margin: 3px 0 0 0;
+    
     .title {
-        font-size: 3rem;
+        padding-top: 20px;
+        font-size: 2rem;
         width: 100%;
         text-align: center;
     }
@@ -229,8 +266,18 @@ $category-item-height:  300px;
 //Main
 
 .main{
+    background: $main-gradient-reverse, $main-gradient-mirror-reverse ;
+    background-position: left, right;
+    padding: 20px 0;
+    background-size:  5px 100%,  5px 100%;
+
     .container{
         padding: $left-padding;
+        .title{
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 }
 
@@ -238,13 +285,22 @@ $category-item-height:  300px;
 
 .categoryCard{
     box-shadow: $category-box-shadow;
-    margin: 20px 0;
     padding: 10px 0;
     border-radius: 10px;
-    .categoryTitle{
-        text-align: left;
-        font-size: 1.5rem;
-        padding: 10px 1rem;
+    margin-bottom: 40px;
+    .titles{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .categoryTitle{
+            text-align: left;
+            font-size: 1.5rem;
+            padding: 10px 1rem;
+        }
+        .extraTitle{
+            padding: 10px 1rem;
+            text-decoration: underline;
+        }
     }
 
     .categoryList{
